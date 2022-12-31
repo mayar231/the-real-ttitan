@@ -1,0 +1,40 @@
+game:GetService("Players").LocalPlayer.Character:WaitForChild("FULLY_LOADED_CHAR")
+    local function rm()
+        for i, v in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
+            if v.Name == "OriginalPosition" then
+                v:Destroy()
+            elseif v.Name == "OriginalSize" then
+                v:Destroy()
+            elseif v.Name == "AvatarPartScaleType" then
+                v:Destroy()
+            end
+        end
+    end
+
+    if game:GetService("Players").LocalPlayer.Character.Humanoid:FindFirstChild("BodyWidthScale") then
+        rm()
+        wait(0.5)
+        game:GetService("Players").LocalPlayer.Character.Humanoid:FindFirstChild("BodyWidthScale"):Destroy()
+        wait(0.5)
+    end
+
+    if game:GetService("Players").LocalPlayer.Character.Humanoid:FindFirstChild("BodyDepthScale") then
+        rm()
+        wait(0.5)
+        game:GetService("Players").LocalPlayer.Character.Humanoid:FindFirstChild("BodyDepthScale"):Destroy()
+        wait(0.5)
+    end
+
+    if game:GetService("Players").LocalPlayer.Character.Humanoid:FindFirstChild("BodyTypeScale") then
+        rm()
+        wait(0.5)
+        game:GetService("Players").LocalPlayer.Character.Humanoid:FindFirstChild("BodyTypeScale"):Destroy()
+        wait(0.5)
+    end
+
+    if game:GetService("Players").LocalPlayer.Character.Humanoid:FindFirstChild("HeadScale") then
+        rm()
+        wait(0.5)
+        game:GetService("Players").LocalPlayer.Character.Humanoid:FindFirstChild("HeadScale"):Destroy()
+        wait(0.5)
+    end
